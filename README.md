@@ -1,1 +1,3 @@
-# primego
+# primebit
+- your amazingly functioning tool!
+
