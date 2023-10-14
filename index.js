@@ -1,6 +1,14 @@
+const colors = require('./colors');
+
 class primebit {
-  static log(string) {
-    console.log(`\x1b[34m[LOGS]\x1b[0m: ${string}`);
+  static setColor(type, color) {
+    colors[type] = color;
+  }
+
+  static log(string, type = 'info') {
+    const logType = type.toUpperCase();
+    const coloredLogType = `${colors[type]}[${logType}]\x1b[0m`;
+    console.log(`${coloredLogType}: ${string}`);
   }
 }
 
