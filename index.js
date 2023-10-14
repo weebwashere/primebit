@@ -1,5 +1,7 @@
-function primebit(string) {
-    return string === "primebit"
+class primebit {
+  static log(string) {
+    console.log(`${string}`);
   }
-  
-  module.exports = primebit
+}
+
+module.exports = primebit;
