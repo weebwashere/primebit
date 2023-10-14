@@ -1,6 +1,6 @@
 {
   "name": "primebit",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "a package that can do stuff, logging, installing packages, and so much more!",
   "main": "index.js",
   "scripts": {
