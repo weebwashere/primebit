@@ -1,7 +1,7 @@
 {
-  "name": "primebit",
-  "version": "1.2.2",
-  "description": "a package that can do stuff, logging, installing packages, and so much more!",
+  "name": "primebit.js",
+  "version": "1.0.1",
+  "description": "a package that can be used for customizable logging features.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
