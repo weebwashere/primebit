@@ -13,9 +13,7 @@ You can also change the color of the logging aswell! There are other features co
 to install primebit You can do the following:
 
 ```
-npm install primebit
+npm install primebit.js
 
 ```
 
-> [!NOTE]
-> This package is only used for Node.js, python support will come very soon.
