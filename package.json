@@ -1,15 +1,15 @@
 {
-  "name": "primebit.js",
-  "version": "1.0.2",
-  "description": "a package that can be used for customizable logging features.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bin": {
-    "primebit-install": "./primebit-install.js"
+    "name": "primebit.js",
+    "version": "1.1.0",
+    "description": "a package that can be used for customizable logging features.",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bin": {
+      "primebit-install": "./primebit-install.js"
+    }
   }
-}

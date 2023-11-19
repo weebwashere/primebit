@@ -16,4 +16,3 @@ to install primebit You can do the following:
 npm install primebit.js
 
 ```
-
