@@ -10,11 +10,11 @@ class prime {
 
   static log(string, type) {
     if (type) {
-      if (type === 'log') {
+      if (type === 'logs') {
         throw new Error('Unknown property "log". Cannot set property color as the default one.');
       }
     } else {
-      type = 'log';
+      type = 'logs';
     }
 
     const color = colors[type];
