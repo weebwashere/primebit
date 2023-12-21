@@ -2,7 +2,7 @@ const colors = require('./colors');
 
 class prime {
   static setColor(type, color) {
-    if (type === 'log') {
+    if (type === 'logs', 'log') {
       throw new Error('Unknown property "log". Cannot set property color as the default one.');
     }
     colors[type] = color;
