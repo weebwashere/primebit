@@ -12,6 +12,10 @@ class prime {
   }
 
   static success(message) {
+    if (arguments.length > 1) {
+      throw new Error('The "primebit.success()" function does not accept multiple arguments.');
+    }
+
     const type = 'success';
     const color = colors[type];
     const logType = type.toUpperCase();
@@ -20,6 +24,10 @@ class prime {
   }
 
   static error(message) {
+    if (arguments.length > 1) {
+      throw new Error('The "error()" function does not accept multiple arguments.');
+    }
+
     const type = 'error';
     const color = colors[type];
     const logType = type.toUpperCase();
@@ -28,6 +36,10 @@ class prime {
   }
 
   static warning(message) {
+    if (arguments.length > 1) {
+      throw new Error('The "warning()" function does not accept multiple arguments.');
+    }
+
     const type = 'warning';
     const color = colors[type];
     const logType = type.toUpperCase();
@@ -35,15 +47,12 @@ class prime {
     console.log(`${coloredLogType}: ${message}`);
   }
 
-  static log(message, type) {
-    if (type) {
-      if (type === 'logs') {
-        throw new Error('Unknown property "logs". Cannot set property color as the default one.');
-      }
-    } else {
-      type = 'logs';
+  static log(message) {
+    if (arguments.length > 1) {
+      throw new Error('The "log()" function does not accept multiple arguments.');
     }
 
+    const type = 'logs';
     const color = colors[type];
     const logType = type.toUpperCase();
     const coloredLogType = `${color}[${logType}]\x1b[0m`;
