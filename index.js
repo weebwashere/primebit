@@ -2,16 +2,43 @@ const colors = require('./colors');
 
 class prime {
   static setColor(type, color) {
-    if (type === 'logs', 'log') {
-      throw new Error('Unknown property "log". Cannot set property color as the default one.');
+    if (type === 'logs') {
+      colors.logs = color;
+    } else if (type === 'log' || type === 'success' || type === 'error' || type === 'warning') {
+      throw new Error(`Unknown property "${type}". Cannot set property color as the default one.`);
+    } else {
+      colors[type] = color;
     }
-    colors[type] = color;
   }
 
-  static log(string, type) {
+  static success(message) {
+    const type = 'success';
+    const color = colors[type];
+    const logType = type.toUpperCase();
+    const coloredLogType = `${color}[${logType}]\x1b[0m`;
+    console.log(`${coloredLogType}: ${message}`);
+  }
+
+  static error(message) {
+    const type = 'error';
+    const color = colors[type];
+    const logType = type.toUpperCase();
+    const coloredLogType = `${color}[${logType}]\x1b[0m`;
+    console.log(`${coloredLogType}: ${message}`);
+  }
+
+  static warning(message) {
+    const type = 'warning';
+    const color = colors[type];
+    const logType = type.toUpperCase();
+    const coloredLogType = `${color}[${logType}]\x1b[0m`;
+    console.log(`${coloredLogType}: ${message}`);
+  }
+
+  static log(message, type) {
     if (type) {
       if (type === 'logs') {
-        throw new Error('Unknown property "log". Cannot set property color as the default one.');
+        throw new Error('Unknown property "logs". Cannot set property color as the default one.');
       }
     } else {
       type = 'logs';
@@ -20,7 +47,7 @@ class prime {
     const color = colors[type];
     const logType = type.toUpperCase();
     const coloredLogType = `${color}[${logType}]\x1b[0m`;
-    console.log(`${coloredLogType}: ${string}`);
+    console.log(`${coloredLogType}: ${message}`);
   }
 }
 
