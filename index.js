@@ -61,3 +61,4 @@ class prime {
 }
 
 module.exports = prime;
+// changed 
